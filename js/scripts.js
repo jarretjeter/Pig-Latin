@@ -46,17 +46,42 @@ function qu(string) {
   return string
 }
 function ignoreNonAlpha(text) { 
-  text = text.replace(/[^A-Za ]/g, "");
-  text = text.toLowerCase();
-  text = text.trim()
-  return text
+  let newText = text.toLowerCase()
+  newText = newText.replace("1", "");
+  newText = newText.trim()
+  return newText
+}
+
+function pigLatin(text) {
+  let textArray = []
+  textArray = text.split(" ")
+  let word =""
+  const newArray = []
+  for (i=0; i < textArray.length; i++)  {
+    word = qu(textArray[i]) 
+    if (word != textArray[i]) {
+      newArray.push(word)
+    } 
+    if (word === textArray[i])  {
+      word = firstVowel(textArray[i])
+      if (word != textArray[i]) {
+        newArray.push(word)
+      }
+    }
+    if (word === textArray[i]) {
+      word = hasConsonant(textArray[i])
+      if (word != textArray[i]) {
+        newArray.push(word)
+      }
+    }
+  } 
+  pigLatinString = newArray.join(" ")
+  return pigLatinString
 }
 
 
-
-// for (i=0; i < stringArray.length; i++) {
-//   if (vowels.includes(stringArray[i]))  {
-//     vowelCount++
-//   }
-// }
-// return vowelCount;
+if (word === textArray[i])  {
+  word = firstVowel(textArray[i])
+} else if (word === textArray[i]) {
+  word = hasConsonant(textArray[i])
+}
