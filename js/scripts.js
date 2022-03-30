@@ -34,11 +34,16 @@ function hasConsonant(string) {
 
 function qu(string) {
   const qu = "qu"
-  let first2chars = string[0].toLowerCase() + string[1].toLowerCase();
-  if (qu === first2chars) {
-    return 1
+  let quArray = string.toLowerCase().split("")
+  let first2Chars = string[0].toLowerCase() + string[1].toLowerCase();
+  if (qu === first2Chars) {
+    let newString = ""
+    quArray.push(first2Chars)
+    quArray.splice(0, 2)
+    newString = quArray.join('') + "ay"
+    return newString
   }
-  return -1
+  return string
 }
 function ignoreNonAlpha(text) { 
   text = text.replace(/[^A-Za ]/g, "");
