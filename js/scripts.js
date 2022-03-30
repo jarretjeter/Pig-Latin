@@ -13,9 +13,14 @@ function hasConsonant(string) {
   const consonant = "b" + "c" + "d" + "f" + "g" + "h" + "j" + "k" + "l" + "m" + "n" + "p" + "q" + "r" + "s" + "t" + "v" + "w" + "x" + "y" + "z"
   let stringArray = string.toLowerCase().split("");
   let consonantLetter = ""
-  if (consonant.includes(stringArray[0])) {
+  let first2Cons = stringArray[0] + stringArray[1];
+
+  if (consonant.includes(stringArray[0]) && consonant.includes(stringArray[1]) && consonant.includes(stringArray[2])) {
     return 1
-  }
+  } else if (consonant.includes(stringArray[0]) && consonant.includes(stringArray[1]))  {
+      return 2
+    } else if (consonant.includes(stringArray[0])) { return 3
+    }
   return -1
 }
 
