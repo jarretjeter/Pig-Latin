@@ -1,18 +1,12 @@
-function pigLatin(string) {
+function firstVowel(string) {
   const vowels = "a" + "e" + "i" + "o" + "u"
-  const qu = "qu"
   let stringArray = string.toLowerCase().split("");
-  let vowelCount = 0
-  for (i=0; i < stringArray.length; i++) {
-    if (qu.includes(string)) {
-      console.log(string)
-      return 1
-    }
-    if (vowels.includes(stringArray[i]))  {
-      vowelCount++
-    }
+  let vowelWord = ""
+  if (vowels.includes(stringArray[0]))  {
+    vowelWord = stringArray.join('') + "way" 
+    return vowelWord
   }
-  return vowelCount;
+  return string;
 };
 
 function qu(string) {
@@ -29,3 +23,12 @@ function ignoreNonAlpha(text) {
   text = text.trim()
   return text
 }
+
+
+
+// for (i=0; i < stringArray.length; i++) {
+//   if (vowels.includes(stringArray[i]))  {
+//     vowelCount++
+//   }
+// }
+// return vowelCount;
