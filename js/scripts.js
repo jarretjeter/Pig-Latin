@@ -9,6 +9,16 @@ function firstVowel(string) {
   return string;
 };
 
+function hasConsonant(string) {
+  const consonant = "b" + "c" + "d" + "f" + "g" + "h" + "j" + "k" + "l" + "m" + "n" + "p" + "q" + "r" + "s" + "t" + "v" + "w" + "x" + "y" + "z"
+  let stringArray = string.toLowerCase().split("");
+  let consonantLetter = ""
+  if (consonant.includes(stringArray[0])) {
+    return 1
+  }
+  return -1
+}
+
 function qu(string) {
   const qu = "qu"
   let first2chars = string[0].toLowerCase() + string[1].toLowerCase();
