@@ -19,15 +19,15 @@ function hasConsonant(string) {
     consonantLetter = stringArray.join('') + "ay"
     return consonantLetter
   } else if (consonant.includes(stringArray[0]) && consonant.includes(stringArray[1]))  {
-    stringArray.push(stringArray[0] + stringArray[1])
-    stringArray.splice(0, 2)
-    consonantLetter = stringArray.join('') + "ay"
-    return consonantLetter
+      stringArray.push(stringArray[0] + stringArray[1])
+      stringArray.splice(0, 2)
+      consonantLetter = stringArray.join('') + "ay"
+      return consonantLetter
     } else if (consonant.includes(stringArray[0])) {
-      stringArray.push(stringArray[0])
-    stringArray.shift();
-    consonantLetter = stringArray.join('') + "ay"
-    return consonantLetter
+        stringArray.push(stringArray[0])
+        stringArray.shift();
+        consonantLetter = stringArray.join('') + "ay"
+        return consonantLetter
     }
   return string
 }
