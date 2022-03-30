@@ -23,3 +23,9 @@ function qu(string) {
   }
   return -1
 }
+function ignoreNonAlpha(text) { 
+  text = text.replace(/[^A-Za ]/g, "");
+  text = text.toLowerCase();
+  text = text.trim()
+  return text
+}
